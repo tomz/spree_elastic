@@ -9,12 +9,12 @@ Spree::Variant.class_eval do
 
     results = search(
       min_score: 0.1,
-      query: {
-        query_string: {
-          fields: [:name, "sku^10", "option_values.name"],
-          query: term
-        }
-      },
+      # query: {
+      #   query_string: {
+      #     fields: [:name, "sku^10", "option_values.name"],
+      #     query: term
+      #   }
+      # },
       size: params[:per_page],
       from: params[:per_page] * (params[:page]-1)
     ).records

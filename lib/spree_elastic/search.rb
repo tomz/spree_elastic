@@ -1,7 +1,3 @@
-module SpreeElastic
-  class Search
-    def retrieve_variants(scope, query, params={})
-      scope.elasticsearch(query, params)
-    end
-  end
-end
+require 'spree_elastic/search/base'
+require 'spree_elastic/search/product'
+require 'spree_elastic/search/variant'
